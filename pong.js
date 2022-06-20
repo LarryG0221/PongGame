@@ -30,7 +30,7 @@ var Ball = function(position, speed) {
     this.resetVelocity();
     
     this.draw = function() {
-        fill(255, 255, 255);
+        fill(255, 255, 0);
         noStroke();
         ellipse(this.position.x, this.position.y,
         this.radius*2, this.radius*2);
@@ -164,3 +164,15 @@ draw = function() {
     
     //Draw the ball
     ball.draw();
+    
+    if (!gameStarted) {
+        t++;
+        if (t >= PAUSE_TIME) {
+            t = 0;
+            gameStarted = true;
+        }
+        return;
+    }
+    
+    ball.update();
+};
