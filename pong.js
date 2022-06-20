@@ -1,3 +1,4 @@
+//this is the code 
 var player1Y = height/2;
 var player2Y = height/2;
 var player1Score = 0;
