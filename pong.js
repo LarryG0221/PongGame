@@ -164,15 +164,3 @@ draw = function() {
     
     //Draw the ball
     ball.draw();
-    
-    if (!gameStarted) {
-        t++;
-        if (t >= PAUSE_TIME) {
-            t = 0;
-            gameStarted = true;
-        }
-        return;
-    }
-    
-    ball.update();
-};
